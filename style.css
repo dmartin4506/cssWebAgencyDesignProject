@@ -7,11 +7,29 @@ body {
   min-height: 95vh;
 }
 .main {
-  flex: 1;
+  flex: 1; /*  What does flex 1 mean in this context? Well Step 1) the parent
+  needs to be marked as display:flex which we see in body { 
+    Then Step 2) Now nested elements can use flex:1 
+    Step 3) With flex:1 the size of all of the other elements will have the 
+      same width as their content, but the element with flex:1 will have all of the remaining
+      full space given to it. 
+
+
+      Ex)
+
+      |    <div>    ||             <flex:1>             ||    <div>    |
+     */
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 5rem;  /* 
+
+    Meaning around rem or Root Element
+    1rem is == to the same font size as the root element 
+    so 5rem == 5 * root element font size 
+
+    Ex) if root = 18px, then 2rem == 36px
+  */
 }
 
 footer {
@@ -37,7 +55,12 @@ footer {
   margin-right: 50px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 650px) {  /* 
+  
+  This is what will allow us to restructure the web page for any screens 
+  that are smaller than 650px i.e. a mobile device for example. 
+
+  */ 
 
   .logo {
     width: 100px;
